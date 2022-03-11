@@ -1,0 +1,262 @@
+body {
+  background-color: rgb(35, 16, 59);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Neonderthaw", cursive;
+  background-size: cover;
+}
+.clicks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 100px;
+  gap: 100px;
+  font-family: "Neonderthaw", cursive;
+}
+.purple {
+  color: #fff;
+  animation: glowPurple 1s ease-in-out infinite alternate;
+  font-size: 30px;
+  letter-spacing: 9px;
+  padding: 25px;
+  border: 7px solid #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #8a26cc,
+    0 0 50px #8a26cc, 0 0 60px #8a26cc, 0 0 70px #8a26cc;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Neonderthaw", cursive;
+}
+
+.blue {
+  color: #fff;
+  animation: glowBlue 1s ease-in-out infinite alternate;
+  font-size: 50px;
+  letter-spacing: 9px;
+  padding: 25px;
+
+  border: 7px solid #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #4dbbee,
+    0 0 50px #4dbbee, 0 0 60px #4dbbee, 0 0 70px #4dbbee;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Neonderthaw", cursive;
+}
+.pink {
+  color: #fff;
+  animation: glowPink 1s ease-in-out infinite alternate;
+  font-size: 25px;
+  letter-spacing: 5px;
+  padding: 25px;
+  margin: 10px;
+  border: 7px solid #fff;
+  box-shadow: 0 0 20px #fff, 0 0 30px #f7b2eb, 0 0 40px #f7b2eb,
+    0 0 50px #f7b2eb, 0 0 60px #f7b2eb, 0 0 70px #f7b2eb;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Neonderthaw", cursive;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 100vh;
+}
+.img {
+  position: absolute;
+}
+
+.inner {
+  /* background-color: rgb(214, 206, 206); */
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 360px;
+  font-size: 15px;
+  transition: 3s ease-in-out;
+  border: 8px dashed #ee72d5;
+  box-shadow: inset 0px 0px 20px 20px #fbccfc;
+  /* background-clip: content-box; */
+  animation: rotate 25s linear infinite;
+
+  position: absolute;
+  opacity: 0.7;
+}
+
+.outter {
+  /* background-color: rgb(214, 206, 206); */
+  height: 550px;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem; */
+  /* background: rgba(36, 35, 48, 255); */
+  border-radius: 360px;
+  font-size: 15px;
+  transition: 3s ease-in-out;
+  border: 8px dashed #3cd2f0b0;
+  box-shadow: inset 0px 0px 20px 15px #c8edff;
+  /* background-clip: content-box; */
+  animation: rotatecounter 50s infinite linear;
+  /* z-index: 2; */
+  position: absolute;
+}
+
+.outtest {
+  /* background-color: rgb(214, 206, 206); */
+  height: 700px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* padding: 1rem; */
+  /* background: rgba(36, 35, 48, 255); */
+  border-radius: 360px;
+  font-size: 15px;
+  /* transition: 5s ease-in-out; */
+  border: 8px dashed #c17df89d;
+  box-shadow: 0px 0px 25px 25px #f5dbfd;
+  /* background-clip: content-box; */
+  animation: rotate 100s infinite linear;
+  /* z-index: 1; */
+  position: absolute;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.inner:hover {
+  box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+.inner:active {
+  box-shadow: 0px 4px 8px 5px rgba(darken(dodgerblue, 30%));
+  transform: scale(0.98);
+}
+.inner:active:after {
+  box-shadow: 0px 0px 20px 5px #c8edff;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 0.95;
+  transition: 0s;
+}
+
+.outter:hover {
+  box-shadow: 0px 25px 50px -5px rgba(darken(dodgerblue, 40%));
+  transform: scale(1.03);
+}
+.outter:active {
+  box-shadow: 0px 4px 8px 5px rgba(darken(dodgerblue, 30%));
+  transform: scale(0.98);
+}
+.outter:active:after {
+  box-shadow: 0px 0px 20px 5px #c8edff;
+  position: absolute;
+  /* border-radius: 4em; */
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 2s;
+}
+
+.outtest:hover {
+  box-shadow: 0px 55px 55px -5px rgba(darken(dodgerblue, 40%));
+  transform: scale(1.03);
+}
+.outtest:active {
+  box-shadow: 0px 4px 8px 5px rgba(darken(dodgerblue, 30%));
+  transform: scale(0.98);
+}
+.outtest:active:after {
+  box-shadow: 0px 0px 20px 5px #c8edff;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.mainImage {
+  display: box;
+  width: 250px;
+  height: 250px;
+  border-radius: 300px;
+  object-fit: cover;
+  box-shadow: 0px 0px 20px 5px #c8edff;
+  z-index: -5;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 3s ease-in-out;
+  /* animation: createBox 10s; */
+}
+/* .mainImage.enlarge { */
+/* display: box; */
+/* animation: createBox 2s;
+} */
+
+@keyframes createBox {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+  to {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rotatecounter {
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes glowPurple {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #8a26cc, 0 0 20px #8a26cc,
+      0 0 25px #8a26cc, 0 0 30px #8a26cc, 0 0 35px #8a26cc;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6,
+      0 0 40px #8a26cc, 0 0 50px #8a26cc, 0 0 60px #8a26cc, 0 0 70px #8a26cc;
+  }
+}
+
+@keyframes glowBlue {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #4dbbee, 0 0 20px #4dbbee,
+      0 0 25px #4dbbee, 0 0 30px #4dbbee, 0 0 35px #4dbbee;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6,
+      0 0 40px #4dbbee, 0 0 50px #4dbbee, 0 0 60px #4dbbee, 0 0 70px #4dbbee;
+  }
+}
+
+@keyframes glowPink {
+  from {
+    text-shadow: 0 0 5px #f7b2eb, 0 0 10px #f7b2eb, 0 0 15px #f7b2eb,
+      0 0 20px #f7b2eb, 0 0 25px #f7b2eb, 0 0 30px #f7b2eb, 0 0 35px #f7b2eb;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f7b2eb,
+      0 0 40px #f7b2eb, 0 0 50px #f7b2eb, 0 0 60px #f7b2eb, 0 0 70px #f7b2eb;
+  }
+}
